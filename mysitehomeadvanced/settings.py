@@ -87,16 +87,16 @@ DATABASES = {
     'default': dj_database_url.config()
 }
 
-"""exemplo usando o mysql
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mysitehomeadvanced',
-        'USER': 'fabiano',
-        'PASSWORD': 'Meubancodedadosmysql*1'
-    }
-}
-"""
+# exemplo usando o mysql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'mysitehomeadvanced',
+#         'USER': 'fabiano',
+#         'PASSWORD': 'Meubancodedadosmysql*1'
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
