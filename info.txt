@@ -1,2 +1,7 @@
 sudo apt install libmysqlclient-dev python3-dev
+
+##para usar o mysql obs: para usar mysql no heroku, precisa de uma conta paga##
 pip install mysql
+
+##para usar postgresql no heroku###
+pip install dj_database_url psycopg2-binary

@@ -2,9 +2,14 @@ from django.shortcuts import render
 from .forms import ContactForm, ProductModelsForm
 from django.contrib import messages
 from .models import Product
+from django.shortcuts import redirect
+
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'products': Product.objects.all()
+    }
+    return render(request, 'index.html', context)
 
 def contact(request):
     form = ContactForm(request.POST or None)
@@ -35,18 +40,23 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 def product(request):
-    if str(request.method) =='POST':
-        form = ProductModelsForm(request.POST, request.FILES)
-        if form.is_valid():
-            prod = form.save(commit=False)
-            messages.success(request, 'Produto salvo')
+    if str(request.user) != 'AnonymousUser':
+        if str(request.method) =='POST':
+            form = ProductModelsForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                # prod = form.save(commit=False)
+                messages.success(request, 'Produto salvo')
+                form = ProductModelsForm()
+            else:
+                messages.error(request,'Não foi salvo')
+                form = ProductModelsForm()
         else:
-            messages.error(request,'Não foi salvo')
-    else:
-        form = ProductModelsForm()
+            form = ProductModelsForm()
         context = {
             'form': form
         }
-    return render(request, 'product.html', context)
-
+        return render(request, 'product.html', context)
+    else:
+        return redirect('index.html')
     

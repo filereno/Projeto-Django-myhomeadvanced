@@ -12,7 +12,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+import dj_database_url
+
+
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.'
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -78,6 +82,12 @@ WSGI_APPLICATION = 'mysitehomeadvanced.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+##exemplo usando o postgreSQL##
+DATABASES = {
+    'default': dj_database_url.config()
+}
+
+"""exemplo usando o mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -86,7 +96,7 @@ DATABASES = {
         'PASSWORD': 'Meubancodedadosmysql*1'
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -127,7 +137,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 LOGOUT_REDIRECT_URL = 'index'
-
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
