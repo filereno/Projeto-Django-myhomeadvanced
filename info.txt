@@ -5,3 +5,6 @@ pip install mysql
 
 ##para usar postgresql no heroku###
 pip install dj_database_url psycopg2-binary
+
+##substitui o whitenoise
+pip install dj-static
