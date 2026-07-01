@@ -49,6 +49,7 @@ Siga os passos abaixo para testar o projeto na sua máquina:
 
 🔮 Próximos Passos (To-Do)
 
+
 [ ] Concluir o fluxo de loja virtual (carrinho e checkout).
 
 [ ] Refinar o layout visual com CSS customizado.
