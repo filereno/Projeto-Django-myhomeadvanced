@@ -48,6 +48,7 @@ Siga os passos abaixo para testar o projeto na sua máquina:
    Acesse no navegador: http://127.0.0.1:8000/
 
 🔮 Próximos Passos (To-Do)
+
 [ ] Concluir o fluxo de loja virtual (carrinho e checkout).
 
 [ ] Refinar o layout visual com CSS customizado.
