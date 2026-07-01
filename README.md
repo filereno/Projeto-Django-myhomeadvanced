@@ -1,6 +1,6 @@
 # 🛒 MyHomeAdvanced - Sistema de Gerenciamento e Estoque
 
-Um sistema web desenvolvido em **Django** para o cadastro de grupos, usuários e gerenciamento de estoque de produtos. O projeto foi idealizado inicialmente para ser a base de uma loja virtual e passou recentemente por uma modernização de código assistida por Inteligência Artificial (Project IDX / Vibe Coding).
+Um sistema web desenvolvido em **Django** para o cadastro de grupos, usuários e gerenciamento de estoque de produtos. O projeto foi idealizado inicialmente para ser a base de uma loja virtual e passou recentemente por uma modernização de código assistida por Inteligência Artificial (Google Antigravity).
 
 ## 🚀 Status do Projeto
 🚧 **Em Desenvolvimento** - A base do controle de estoque e usuários está funcional. A etapa de conversão final para loja virtual com carrinho de compras é o foco das futuras atualizações.
@@ -41,4 +41,17 @@ Siga os passos abaixo para testar o projeto na sua máquina:
    ```bash
    python -m venv venv
    source venv/bin/activate  # No Linux/Mac
-   venv\Scripts\activate     # No Windows
+   pip install -r requirements.txt
+   python manage.py migrate
+   python manage.py createsuperuser
+   python manage.py runserver
+   Acesse no navegador: http://127.0.0.1:8000/
+
+🔮 Próximos Passos (To-Do)
+[ ] Concluir o fluxo de loja virtual (carrinho e checkout).
+
+[ ] Refinar o layout visual com CSS customizado.
+
+[ ] Implementar sistema de recuperação de senhas.
+   
+   
